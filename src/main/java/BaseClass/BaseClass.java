@@ -63,6 +63,10 @@ public class BaseClass {
 
 
 
+    public static void waitTime()
+    {
+        threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+    }
     public static void clickTheElement(By locator)
     {
         WebDriverWait wait = new WebDriverWait(threadDriver.get(), Duration.ofSeconds(10));
@@ -109,16 +113,7 @@ public class BaseClass {
         return title;
     }
 
-    public static void waitTime()
-    {
 
-        /*
-         * WebDriverWait wait = new WebDriverWait(threadDriver.get(),
-         * Duration.ofSeconds(10)); wait.until(ExpectedConditions.visibilityOf(locator))
-         */
-
-        threadDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
 
     public static boolean isDisplayed(By locator)
     {
