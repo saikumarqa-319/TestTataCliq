@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/automation projects/TataCliqProject/src/test/java/testClasses/GiftCardTest.java"><classes>
+        <class name="testClasses.GiftCardTest">
+            <methods><include name="GiftCardExploringTest"/></methods>
+        </class>
+    </classes>
+    </test>
+</suite>
