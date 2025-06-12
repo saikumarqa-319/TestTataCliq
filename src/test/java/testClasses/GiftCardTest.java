@@ -22,6 +22,7 @@ public class GiftCardTest extends BaseClass
         home.clickGiftCardBtn();
         gift.clickExploreBenfiTSBtn();
         gift.contactUs();
+        home.clickLogo();
 
     }
 

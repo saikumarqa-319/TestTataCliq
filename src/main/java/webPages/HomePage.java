@@ -31,6 +31,11 @@ public class HomePage extends BaseClass
         Assert.assertEquals(PropertyClassconfig.getproperty("shoppingliNKTitleInClickCare"), gettitle);
     }
 
+
+    public void clickLogo()
+    {
+        clickTheElement(logo);
+    }
     public void launch()
     {
         System.out.println(PropertyClassconfig.getproperty("Browser"));
