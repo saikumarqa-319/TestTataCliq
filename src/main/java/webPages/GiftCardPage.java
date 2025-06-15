@@ -15,6 +15,7 @@ public class GiftCardPage  extends BaseClass
     private By companyNamefield = By.xpath(LocatorPropertyconfig.getproperty("compnyNameInCntctForm"));
     private By corporateEmailField = By.xpath(LocatorPropertyconfig.getproperty("corportateEmailInCntcForm"));
     private By errorMessage = By.xpath(LocatorPropertyconfig.getproperty("errorText"));
+    private By crossIcon   = By.xpath(LocatorPropertyconfig.getproperty("crossIcon"));
     public  void clickExploreBenfiTSBtn()
     {
         waitTime();
@@ -33,6 +34,7 @@ public class GiftCardPage  extends BaseClass
         enterInput(corporateEmailField, PropertyClassconfig.getproperty("CorporateEmail"));
         boolean result = isDisplayed(errorMessage);
         Assert.assertEquals(result, true);
+        clickTheElement(crossIcon);
 
 
 

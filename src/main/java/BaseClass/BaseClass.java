@@ -63,6 +63,10 @@ public class BaseClass {
 
 
 
+    public static void refreshThePage()
+    {
+        threadDriver.get().navigate().refresh();
+    }
     public static void waitTime()
     {
         threadDriver.get().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));

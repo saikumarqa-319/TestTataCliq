@@ -1,6 +1,8 @@
 package testClasses;
 
 import BaseClass.BaseClass;
+import org.apache.logging.log4j.core.net.Priority;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import webPages.GiftCardPage;
 import webPages.HomePage;
@@ -15,10 +17,11 @@ public class GiftCardTest extends BaseClass
 
 
 
-    @Test
-    public void GiftCardExploringTest()
+    @Test(priority = 1)
+    @Parameters("browserName")
+    public void GiftCardExploringTest(String browserName)
     {
-        home.launch();
+        home.launch(browserName);
         home.clickGiftCardBtn();
         gift.clickExploreBenfiTSBtn();
         gift.contactUs();
