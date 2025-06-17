@@ -1,6 +1,7 @@
 package testClasses;
 
 import BaseClass.BaseClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import webPages.ClickCare;
 import webPages.HomePage;
@@ -12,9 +13,10 @@ public class HomePageTest extends BaseClass
 
 
 
-    @Test
-    public void signInwithValidCredentials() throws InterruptedException {
-        home.launch();
+    @Test(priority = 0)
+    @Parameters("browserName")
+    public void signInwithValidCredentials(String browserName) throws InterruptedException {
+        home.launch(browserName);
         home.categoriesFunctionInHomePage();
         home.clickTheClicQcareBtn();
         care.clickTheShoppingLinkInClicqcare();

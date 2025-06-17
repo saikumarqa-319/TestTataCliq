@@ -34,19 +34,23 @@ public class HomePage extends BaseClass
 
     public void clickLogo()
     {
+
+       refreshThePage();
         clickTheElement(logo);
     }
-    public void launch()
+    public void launch(String BrowserName)
     {
-        System.out.println(PropertyClassconfig.getproperty("Browser"));
-        selectBrowser(PropertyClassconfig.getproperty("Browser"));
+
+        selectBrowser(BrowserName);
         threadDriver.get().get(PropertyClassconfig.getproperty("Url"));
     }
 
     public void categoriesFunctionInHomePage() throws InterruptedException {
          clickTheElement(categoriesBtn);
         // Thread.sleep(3000);
-         clickTheElement(logo);
+         //clickTheElement(logo);
+         openNewWindowwithJavaScript(logo);
+         waitTime();
 
     }
 

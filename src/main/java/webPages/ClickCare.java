@@ -25,7 +25,7 @@ public class ClickCare  extends BaseClass
 
     public void clickTheoffersLinkInClicqcare()
     {
-        clickTheElement(offersLinkInXClicqCare);
+        openNewWindow(offersLinkInXClicqCare);
         String gettitle = getTitle();
         Assert.assertEquals(PropertyClassconfig.getproperty("shoppingliNKTitleInClickCare"), gettitle);
 
