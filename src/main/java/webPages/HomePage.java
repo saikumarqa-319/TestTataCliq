@@ -48,7 +48,9 @@ public class HomePage extends BaseClass
     public void categoriesFunctionInHomePage() throws InterruptedException {
          clickTheElement(categoriesBtn);
         // Thread.sleep(3000);
-         clickTheElement(logo);
+         //clickTheElement(logo);
+         openNewWindowwithJavaScript(logo);
+         waitTime();
 
     }
 

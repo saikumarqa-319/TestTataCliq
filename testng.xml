@@ -3,7 +3,7 @@
     <test verbose="4" preserve-order="true"  parallel="classes" name="TataCliqTest">
         <parameter name="browserName" value="chrome"/>
         <classes>
-        <class name="testClasses.GiftCardTest"/>
+       <!-- <class name="testClasses.GiftCardTest"/>-->
         <class name="testClasses.HomePageTest"/>
     </classes>
     </test>

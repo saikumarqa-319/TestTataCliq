@@ -1,8 +1,8 @@
 package BaseClass;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,6 +11,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
 
 public class BaseClass {
     static BrowserManager bgm = new BrowserManager();
@@ -61,6 +63,21 @@ public class BaseClass {
         threadDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
+
+
+    public static void openNewWindow(By Locator)
+    {
+        WebElement element = threadDriver.get().findElement(Locator);
+        Actions action = new Actions(threadDriver.get());
+        action.keyDown(Keys.DOWN).click(element).keyUp(Keys.CONTROL).perform();
+    }
+
+    public static void openNewWindowwithJavaScript(By Locator)
+    {
+        WebElement element = threadDriver.get().findElement(Locator);
+        JavascriptExecutor js = (JavascriptExecutor) threadDriver.get();
+        js.executeScript("window.open(arguments[0], '_blank');", element);
+    }
 
 
     public static void refreshThePage()
