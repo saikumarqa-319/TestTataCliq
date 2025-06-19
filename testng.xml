@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite">
-    <test verbose="4" preserve-order="true"  parallel="classes" name="TataCliqTest">
+    <listeners>
+        <listener class-name="BaseClass.RetryListener"/>
+    </listeners>
+    <test verbose="4"   parallel="methods" name="TataCliqTest" thread-count="2">
         <parameter name="browserName" value="chrome"/>
         <classes>
        <!-- <class name="testClasses.GiftCardTest"/>-->
