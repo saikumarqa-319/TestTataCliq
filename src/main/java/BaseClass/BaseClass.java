@@ -148,7 +148,7 @@ public class BaseClass {
 
         return true;
     }
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public static void closeTheBrowser()
     {
         ExtentReportUtil.endTest();

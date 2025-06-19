@@ -12,7 +12,7 @@ public class ExtentReportUtil  extends  BaseClass
 {
 
     private static ExtentReports extent;
-    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+    private static  final ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
     public static void initReports(String reportPath) {
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
